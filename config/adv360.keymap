@@ -40,59 +40,66 @@
         mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
     };
 
-    ltn9: less_than_n9 {
+    n9_less: n9_less {
         compatible = "zmk,behavior-mod-morph";
-        label = "LESS_THAN_N9";
         #binding-cells = <0>;
         bindings = <&kp N9>, <&kp LESS_THAN>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
-    gtn0: greater_than_n0 {
+    n0_greater: n0_greater {
         compatible = "zmk,behavior-mod-morph";
-        label = "GREATER_THAN_N0";
         #binding-cells = <0>;
         bindings = <&kp N0>, <&kp GREATER_THAN>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
-    scomma: semicolon_comma {
+    comma_semi: comma_semi {
         compatible = "zmk,behavior-mod-morph";
-        label = "SEMICOLON_COMMA";
         #binding-cells = <0>;
         bindings = <&kp COMMA>, <&kp SEMICOLON>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
-    qperiod: question_period {
+    dot_qmark: dot_qmark {
         compatible = "zmk,behavior-mod-morph";
-        label = "QUESTION_PERIOD";
         #binding-cells = <0>;
         bindings = <&kp PERIOD>, <&kp QUESTION>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
-    pcolon: pipe_colon {
+    grave_pipe: grave_pipe {
         compatible = "zmk,behavior-mod-morph";
-        label = "PIPE_COLON";
         #binding-cells = <0>;
-        bindings = <&kp COLON>, <&kp PIPE>;
+        bindings = <&kp GRAVE>, <&kp PIPE>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
-    pgdnslash: page_down_slash {
+    colon_tilde: colon_tilde {
         compatible = "zmk,behavior-mod-morph";
-        label = "PAGE_DOWN_SLASH";
         #binding-cells = <0>;
-        bindings = <&kp SLASH>, <&kp PAGE_DOWN>;
+        bindings = <&kp COLON>, <&kp TILDE>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
-    pgupblash: page_up_backslash {
+    slash_home: slash_home {
         compatible = "zmk,behavior-mod-morph";
-        label = "PAGE_UP_BACKSLASH";
         #binding-cells = <0>;
-        bindings = <&kp BACKSLASH>, <&kp PAGE_UP>;
+        bindings = <&kp SLASH>, <&kp HOME>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    backslash_end: backslash_end {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp BACKSLASH>, <&kp END>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    bspc_del: bspc_del {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp BSPC>, <&kp DEL>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
   };
@@ -100,46 +107,34 @@
     keymap {
         compatible = "zmk,keymap";
 
-
         default_layer {
             bindings = <
-  &kp GRAVE        &kp N1        &kp N2      &kp N3  &kp N4  &kp N5         &mo 2                                                                                                   &mo 2   &kp N6    &kp N7    &kp N8          &ltn9      &gtn0     &pgupbslash
-   &kp TAB        &kp SQT       &scomma    &qperiod   &kp P   &kp Y  &kp C_BRI_DN                                                                                            &kp C_BRI_UP   &kp F     &kp G      &kp C          &kp R      &kp L      &pgdnslash
- &kp EQUAL          &kp A         &kp O       &kp E   &kp U   &kp I  &kp C_VOL_DN  &kp LEFT_WIN               &kp DEL                                &kp INS  &kp RIGHT_WIN  &kp C_VOL_UP   &kp D     &kp H      &kp T          &kp N      &kp S      &kp MINUS
- &kp LSHFT        &pcolon         &kp Q       &kp J   &kp K   &kp X                              &kp LEFT_PARENTHESIS                  &kp RIGHT_PARENTHESIS                                &kp B     &kp M      &kp W          &kp V      &kp Z      &kp RSHFT
-     &mo 1      &kp LCTRL  &kp LEFT_ALT    &kp DOWN  &kp UP              &kp BSPC       &kp ESC      &kp LEFT_BRACKET                      &kp RIGHT_BRACKET      &kp ENTER     &kp SPACE          &kp LEFT  &kp RIGHT  &kp RIGHT_ALT  &kp RCTRL          &mo 1
+ &slash_home       &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                     &mo 2                                                         &mo 2                     &kp N6      &kp N7        &kp N8       &n9_less    &n0_greater &backslash_end
+     &kp TAB      &kp SQT  &comma_semi   &dot_qmark        &kp P        &kp Y              &kp C_BRI_DN                                                         &kp C_BRI_UP              &kp F       &kp G         &kp C        &kp R       &kp L       &grave_pipe
+   &kp EQUAL        &kp A        &kp O        &kp E        &kp U        &kp I              &kp C_VOL_DN    &kp LWIN      &kp PGDN    &kp PGUP       &kp RWIN     &kp C_VOL_UP              &kp D       &kp H         &kp T        &kp N       &kp S       &kp MINUS
+   &kp LSHFT &colon_tilde        &kp Q        &kp J        &kp K        &kp X                                            &kp LPAR    &kp RPAR                                             &kp B       &kp M         &kp W        &kp V       &kp Z       &kp RSHFT
+       &mo 1    &kp LCTRL     &kp LALT     &kp DOWN       &kp UP                              &bspc_del    &kp ESC       &kp LBKT    &kp RBKT      &kp ENTER    &kp SPACE                             &kp LEFT      &kp RIGHT    &kp RALT    &kp RCTRL   &mo 1
+              >;
+          };
+
+          layer_fn {
+              bindings = <
+      &trans       &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                     &mo 1                                                         &mo 1                     &kp F6      &kp F7        &kp F8       &kp F9      &kp F10     &trans
+      &trans      &kp F11      &kp F12      &kp F13      &kp F14      &kp F15                     &none                                                         &none                     &kp F16     &kp F17       &kp F18      &kp F19     &kp F20     &trans
+      &trans       &trans       &trans       &trans       &trans       &trans                     &none      &trans        &trans    &trans        &trans       &none                     &trans      &trans        &trans       &trans      &trans      &trans
+      &trans       &trans       &trans       &trans       &trans       &trans                                              &trans    &trans                                               &trans      &trans        &trans       &trans      &trans      &trans
+      &trans       &trans       &trans       &trans       &trans                                 &trans      &trans        &trans    &trans        &trans       &trans                                &trans        &trans       &trans      &trans      &trans
+              >;
+          };
+
+          layer_mod {
+              bindings = <
+       &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                    &trans                                                         &trans                    &none        &none        &none        &none       &none       &none
+       &none        &none        &none        &none        &none        &none               &bootloader                                                         &bootloader               &none        &none        &none        &none       &none       &none
+       &none        &none        &none        &none        &none        &none    &rgb_ug RGB_MEFS_CMD 5        &none   &bt BT_CLR    &bt BT_CLR    &none        &rgb_ug RGB_MEFS_CMD 5    &none        &none        &none        &none       &none       &none
+       &none        &none        &none        &none        &none        &none                                               &none    &none                                                &none        &none        &none        &none       &none       &none
+       &none        &none        &none   &bl BL_DEC   &bl BL_INC                        &rgb_ug RGB_TOG   &bl BL_TOG        &none    &none         &bl BL_TOG   &rgb_ug RGB_TOG                        &bl BL_DEC   &bl BL_INC   &none       &none       &none
             >;
         };
-
-        layer_fn {
-            bindings = <
- &trans   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5             &mo 1                                                   &mo 1   &kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans
- &trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15             &none                                                   &none  &kp F16  &kp F17  &kp F18  &kp F19  &kp F20  &trans
- &trans   &trans   &trans   &trans   &trans   &trans             &none  &trans  &trans                  &trans  &trans   &none   &trans   &trans   &trans   &trans   &trans  &trans
- &trans   &trans   &trans   &trans   &trans   &trans                            &trans                  &trans                   &trans   &trans   &trans   &trans   &trans  &trans
- &trans   &trans   &trans   &trans   &trans                     &trans  &trans  &trans                  &trans  &trans  &trans            &trans   &trans   &trans   &trans  &trans
-            >;
-        };
-
-        layer_mod {
-            bindings = <
-  &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                            &trans                                                                                  &trans   &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none         &none         &none                       &bootloader                                                                             &bootloader   &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none         &none         &none            &rgb_ug RGB_MEFS_CMD 5       &none  &bt BT_CLR                  &bt BT_CLR       &none  &rgb_ug RGB_MEFS_CMD 5   &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none         &none         &none                                                     &none                       &none                                       &none       &none       &none   &none   &none   &none
-  &none         &none         &none    &bl BL_DEC    &bl BL_INC                                 &rgb_ug RGB_TOG  &bl BL_TOG       &none                       &none  &bl BL_TOG         &rgb_ug RGB_TOG          &bl BL_DEC  &bl BL_INC   &none   &none   &none
-            >;
-        };
-
-        layer_Z {
-            bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                            &trans                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
     };
 };
