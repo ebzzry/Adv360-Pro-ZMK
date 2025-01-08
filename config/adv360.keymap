@@ -40,19 +40,43 @@
         mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
     };
 
-    lbn9: left_brace_n9 {
+    ltn9: less_than_n9 {
         compatible = "zmk,behavior-mod-morph";
-        label = "LEFT_BRACE_N9";
+        label = "LESS_THAN_N9";
         #binding-cells = <0>;
-        bindings = <&kp N9>, <&kp LEFT_BRACE>;
+        bindings = <&kp N9>, <&kp LESS_THAN>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
-    rbn0: right_brace_n0 {
+    gtn0: greater_than_n0 {
         compatible = "zmk,behavior-mod-morph";
-        label = "RIGHT_BRACE_N0";
+        label = "GREATER_THAN_N0";
         #binding-cells = <0>;
-        bindings = <&kp N0>, <&kp RIGHT_BRACE>;
+        bindings = <&kp N0>, <&kp GREATER_THAN>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    scomma: semicolon_comma {
+        compatible = "zmk,behavior-mod-morph";
+        label = "SEMICOLON_COMMA";
+        #binding-cells = <0>;
+        bindings = <&kp COMMA>, <&kp SEMICOLON>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    qperiod: question_period {
+        compatible = "zmk,behavior-mod-morph";
+        label = "QUESTION_PERIOD";
+        #binding-cells = <0>;
+        bindings = <&kp PERIOD>, <&kp QUESTION>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    pcolon: pipe_colon {
+        compatible = "zmk,behavior-mod-morph";
+        label = "PIPE_COLON";
+        #binding-cells = <0>;
+        bindings = <&kp COLON>, <&kp PIPE>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
   };
@@ -63,11 +87,11 @@
 
         default_layer {
             bindings = <
- &kp GRAVE         &kp N1        &kp N2      &kp N3  &kp N4  &kp N5                   &mo 2                                                                                                   &mo 2  &kp N6    &kp N7     &kp N8          &lbn9      &rbn0  &kp BACKSLASH
-   &kp TAB        &kp SQT     &kp COMMA  &kp PERIOD   &kp P   &kp Y            &kp C_BRI_DN                                                                                            &kp C_BRI_UP   &kp F     &kp G      &kp C          &kp R      &kp L      &kp SLASH
- &kp EQUAL          &kp A         &kp O       &kp E   &kp U   &kp I            &kp C_VOL_DN  &kp LEFT_WIN               &kp DEL                                &kp INS  &kp RIGHT_GUI  &kp C_VOL_UP   &kp D     &kp H      &kp T          &kp N      &kp S      &kp MINUS
- &kp LSHFT  &kp SEMICOLON         &kp Q       &kp J   &kp K   &kp X                                        &kp LEFT_PARENTHESIS                  &kp RIGHT_PARENTHESIS                                &kp B     &kp M      &kp W          &kp V      &kp Z      &kp RSHFT
-     &mo 1      &kp LCTRL  &kp LEFT_ALT    &kp DOWN  &kp UP                        &kp BSPC       &kp ESC      &kp LEFT_BRACKET                      &kp RIGHT_BRACKET      &kp ENTER     &kp SPACE          &kp LEFT  &kp RIGHT  &kp RIGHT_ALT  &kp RCTRL          &mo 1
+  &kp GRAVE        &kp N1        &kp N2      &kp N3  &kp N4  &kp N5         &mo 2                                                                                                   &mo 2   &kp N6    &kp N7    &kp N8          &ltn9      &gtn0  &kp backslash
+   &kp TAB        &kp SQT       &scomma    &qperiod   &kp P   &kp Y  &kp C_BRI_DN                                                                                            &kp C_BRI_UP   &kp F     &kp G      &kp C          &kp R      &kp L      &kp slash
+ &kp EQUAL          &kp A         &kp O       &kp E   &kp U   &kp I  &kp C_VOL_DN  &kp LEFT_WIN               &kp DEL                                &kp INS  &kp RIGHT_WIN  &kp C_VOL_UP   &kp D     &kp H      &kp T          &kp N      &kp S      &kp MINUS
+ &kp LSHFT        &pcolon         &kp Q       &kp J   &kp K   &kp X                              &kp LEFT_PARENTHESIS                  &kp RIGHT_PARENTHESIS                                &kp B     &kp M      &kp W          &kp V      &kp Z      &kp RSHFT
+     &mo 1      &kp LCTRL  &kp LEFT_ALT    &kp DOWN  &kp UP              &kp BSPC       &kp ESC      &kp LEFT_BRACKET                      &kp RIGHT_BRACKET      &kp ENTER     &kp SPACE          &kp LEFT  &kp RIGHT  &kp RIGHT_ALT  &kp RCTRL          &mo 1
             >;
         };
 
