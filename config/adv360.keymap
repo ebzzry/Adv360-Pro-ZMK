@@ -79,6 +79,22 @@
         bindings = <&kp COLON>, <&kp PIPE>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
+
+    pgdnslash: page_down_slash {
+        compatible = "zmk,behavior-mod-morph";
+        label = "PAGE_DOWN_SLASH";
+        #binding-cells = <0>;
+        bindings = <&kp SLASH>, <&kp PAGE_DOWN>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    pgupblash: page_up_backslash {
+        compatible = "zmk,behavior-mod-morph";
+        label = "PAGE_UP_BACKSLASH";
+        #binding-cells = <0>;
+        bindings = <&kp BACKSLASH>, <&kp PAGE_UP>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
   };
 
     keymap {
@@ -87,8 +103,8 @@
 
         default_layer {
             bindings = <
-  &kp GRAVE        &kp N1        &kp N2      &kp N3  &kp N4  &kp N5         &mo 2                                                                                                   &mo 2   &kp N6    &kp N7    &kp N8          &ltn9      &gtn0  &kp backslash
-   &kp TAB        &kp SQT       &scomma    &qperiod   &kp P   &kp Y  &kp C_BRI_DN                                                                                            &kp C_BRI_UP   &kp F     &kp G      &kp C          &kp R      &kp L      &kp slash
+  &kp GRAVE        &kp N1        &kp N2      &kp N3  &kp N4  &kp N5         &mo 2                                                                                                   &mo 2   &kp N6    &kp N7    &kp N8          &ltn9      &gtn0     &pgupbslash
+   &kp TAB        &kp SQT       &scomma    &qperiod   &kp P   &kp Y  &kp C_BRI_DN                                                                                            &kp C_BRI_UP   &kp F     &kp G      &kp C          &kp R      &kp L      &pgdnslash
  &kp EQUAL          &kp A         &kp O       &kp E   &kp U   &kp I  &kp C_VOL_DN  &kp LEFT_WIN               &kp DEL                                &kp INS  &kp RIGHT_WIN  &kp C_VOL_UP   &kp D     &kp H      &kp T          &kp N      &kp S      &kp MINUS
  &kp LSHFT        &pcolon         &kp Q       &kp J   &kp K   &kp X                              &kp LEFT_PARENTHESIS                  &kp RIGHT_PARENTHESIS                                &kp B     &kp M      &kp W          &kp V      &kp Z      &kp RSHFT
      &mo 1      &kp LCTRL  &kp LEFT_ALT    &kp DOWN  &kp UP              &kp BSPC       &kp ESC      &kp LEFT_BRACKET                      &kp RIGHT_BRACKET      &kp ENTER     &kp SPACE          &kp LEFT  &kp RIGHT  &kp RIGHT_ALT  &kp RCTRL          &mo 1
