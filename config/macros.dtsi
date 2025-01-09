@@ -21,9 +21,9 @@ macro_parens_1: macro_parens_1 {
     bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;
 };
 
-macro_brackets_2: macro_brackets_2 {
+macro_brackets_1: macro_brackets_1 {
     compatible = "zmk,behavior-macro";
-    label = "macro_brackets_2";
+    label = "macro_brackets_1";
     #binding-cells = <0>;
     bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
 };
