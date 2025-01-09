@@ -83,18 +83,18 @@ m_bkt_brc_1: m_bkt_brc_1 {
   #binding-cells = <0>;
   bindings = <&m_bkt_1>, <&m_brc_1>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
-}
+};
 
 m_bkt_brc_2: m_bkt_brc_2 {
   compatible = "zmk,behavior-mod-morph";
   #binding-cells = <0>;
   bindings = <&m_bkt_2>, <&m_brc_2>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
-}
+};
 
 m_sqt_dqt: m_sqt_dqt {
   compatible = "zmk,behavior-mod-morph";
   #binding-cells = <0>;
   bindings = <&m_sqt>, <&m_dqt>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
-}
+};
