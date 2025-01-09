@@ -1,55 +1,72 @@
-macro_quotes: macro_quotes {
+/* quotes */
+
+m_sqt: m_sqt {
     compatible = "zmk,behavior-macro";
-    label = "macro_quotes";
+    label = "m_sqt";
     #binding-cells = <0>;
     bindings = <&kp SQT>, <&kp SQT>, <&kp LEFT>;
 };
 
-macro_dquotes: macro_dquotes {
+m_dqt: m_dqt {
     compatible = "zmk,behavior-macro";
-    label = "macro_dquotes";
+    label = "m_dqt";
     #binding-cells = <0>;
     bindings = <&kp DQT>, <&kp DQT>, <&kp LEFT>;
 };
 
-macro_parens_1: macro_parens_1 {
+/* parentheses */
+
+m_par_1: m_par_1 {
     compatible = "zmk,behavior-macro";
-    label = "macro_parens_1";
+    label = "m_par_1";
     #binding-cells = <0>;
     bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;
 };
 
-macro_brackets_1: macro_brackets_1 {
+m_par_2: m_par_2 {
     compatible = "zmk,behavior-macro";
-    label = "macro_brackets_1";
-    #binding-cells = <0>;
-    bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
-};
-
-macro_parens_2: macro_parens_2 {
-    compatible = "zmk,behavior-macro";
-    label = "macro_parens_2";
+    label = "m_par_2";
     #binding-cells = <0>;
     bindings = <&kp LPAR>, <&kp RPAR>;
 };
 
-macro_brackets_2: macro_brackets_2 {
+/* brackets */
+
+m_bkt_1: m_bkt_1 {
     compatible = "zmk,behavior-macro";
-    label = "macro_brackets_2";
+    label = "m_bkt_1";
+    #binding-cells = <0>;
+    bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
+};
+
+m_bkt_2: m_bkt_2 {
+    compatible = "zmk,behavior-macro";
+    label = "m_bkt_2";
     #binding-cells = <0>;
     bindings = <&kp LBKT>, <&kp RBKT>;
 };
 
-macro_braces: macro_braces {
+/* braces */
+
+m_brc_1: m_brc_1 {
     compatible = "zmk,behavior-macro";
-    label = "macro_braces";
+    label = "m_brc_1";
     #binding-cells = <0>;
     bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
 };
 
-macro_graves: macro_graves {
+m_brc_2: m_brc_2 {
     compatible = "zmk,behavior-macro";
-    label = "macro_graves";
+    label = "m_brc_2";
+    #binding-cells = <0>;
+    bindings = <&kp LBRC>, <&kp RBRC>;
+};
+
+/* misc */
+
+m_graves: m_graves {
+    compatible = "zmk,behavior-macro";
+    label = "m_graves";
     #binding-cells = <0>;
     bindings = <&kp GRAVE>, <&kp GRAVE>, <&kp GRAVE>, <&kp GRAVE>, <&kp GRAVE>, <&kp GRAVE>, <&kp LEFT>, <&kp LEFT>, <&kp LEFT>;
 };

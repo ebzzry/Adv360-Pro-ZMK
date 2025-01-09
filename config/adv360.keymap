@@ -29,10 +29,10 @@
               layer_fn {
                   bindings = <
           &trans       &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                   &mo 1                                                                    &mo 1                   &kp F6      &kp F7        &kp F8       &kp F9      &kp F10     &trans
-          &trans      &kp F11      &kp F12      &kp F13      &kp F14      &kp F15                   &none                                                                    &none                   &kp F16     &kp F17       &kp F18      &kp F19     &kp F20     &macro_graves
-          &trans       &trans       &trans       &trans       &trans       &trans                   &none      &trans            &kp PGDN    &kp PGUP           &trans       &none                   &trans      &trans        &trans       &trans      &trans      &trans
-       &kp LSHFT       &trans       &trans       &trans       &trans       &trans                                         &macro_parens_1    &macro_parens_2                                         &trans      &trans        &trans       &trans      &trans      &kp RSHFT
-          &trans       &trans       &trans       &trans       &trans                               &trans      &trans   &macro_brackets_1    &macro_brackets_2  &trans       &trans                              &trans        &trans       &trans      &trans      &trans
+          &trans   &m_sqt_dqt       &trans       &trans       &trans       &trans                   &none                                                                    &none                   &trans      &trans        &trans       &trans      &trans      &m_graves
+          &trans       &trans       &trans       &trans       &trans       &trans                   &none      &trans            &kp F11     &kp F12            &trans       &none                   &trans      &trans        &trans       &trans      &trans      &trans
+       &kp LSHFT       &trans       &trans       &trans       &trans       &trans                                                &m_par_1    &m_par_2                                                &trans      &trans        &trans       &trans      &trans      &kp RSHFT
+          &trans       &trans       &trans       &trans       &trans                               &trans      &trans        &m_bkt_brc_1    &m_bkt_brc_2       &trans       &trans                              &trans        &trans       &trans      &trans      &trans
                   >;
               };
 
