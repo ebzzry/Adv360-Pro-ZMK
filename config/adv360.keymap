@@ -18,8 +18,8 @@
 
         default_layer {
             bindings = <
-       &kp grave       &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                   &mo 2                                                                    &mo 2                   &kp N6      &kp N7        &kp N8       &n9_less    &n0_greater &kp backslash
-         &kp TAB      &kp SQT  &comma_semi   &dot_colon        &kp P        &kp Y            &kp C_BRI_DN                                                                    &kp C_BRI_UP            &kp F       &kp G         &kp C        &kp R       &kp L       &kp slash
+       &kp GRAVE       &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                   &mo 2                                                                    &mo 2                   &kp N6      &kp N7        &kp N8       &n9_less    &n0_greater &kp BACKSLASH
+         &kp TAB      &kp SQT  &comma_semi   &dot_colon        &kp P        &kp Y            &kp C_BRI_DN                                                                    &kp C_BRI_UP            &kp F       &kp G         &kp C        &kp R       &kp L       &kp SLASH
        &kp EQUAL        &kp A        &kp O        &kp E        &kp U        &kp I            &kp C_VOL_DN    &kp LWIN            &kp PGDN    &kp PGUP           &kp RWIN     &kp C_VOL_UP            &kp D       &kp H         &kp T        &kp N       &kp S       &kp MINUS
        &kp LSHFT     &del_ins        &kp Q        &kp J        &kp K        &kp X                                                &kp LPAR    &kp RPAR                                                &kp B       &kp M         &kp W        &kp V       &kp Z       &kp RSHFT
            &mo 1    &kp LCTRL     &kp LALT     &kp DOWN       &kp UP                             &kp bspc    &kp ESC             &kp LBKT    &kp RBKT           &kp ENTER    &kp SPACE                           &kp LEFT      &kp RIGHT    &kp RALT    &kp RCTRL   &mo 1
