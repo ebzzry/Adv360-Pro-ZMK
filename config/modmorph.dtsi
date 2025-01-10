@@ -109,6 +109,6 @@ m_sqt_dqt: m_sqt_dqt {
 del_ins: del_ins {
   compatible = "zmk,behavior-mod-morph";
   #binding-cells = <0>;
-  bindings = <&kp del>, <&kp ins>;
+  bindings = <&kp DEL>, <&kp INS>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
 };
