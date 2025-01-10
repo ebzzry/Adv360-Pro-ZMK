@@ -106,13 +106,6 @@ m_sqt_dqt: m_sqt_dqt {
   mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
-slash_home: slash_home {
-  compatible = "zmk,behavior-mod-morph";
-  #binding-cells = <0>;
-  bindings = <&kp SLASH>, <&kp HOME>;
-  mods = <(MOD_LSFT|MOD_RSFT)>;
-};
-
 del_ins: del_ins {
   compatible = "zmk,behavior-mod-morph";
   #binding-cells = <0>;
